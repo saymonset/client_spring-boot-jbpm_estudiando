@@ -52,7 +52,7 @@ public class ExternalInteraction  {
 
         RuntimeEngine runtimeEngine = runtimeManager.getRuntimeEngine(EmptyContext.get());
         KieSession ksession = runtimeEngine.getKieSession();
-       ProcessInstance pI = ksession.startProcess("myExternalInteractionsProcess");
+      // ProcessInstance pI = ksession.startProcess("myExternalInteractionsProcess");
 
 
 
