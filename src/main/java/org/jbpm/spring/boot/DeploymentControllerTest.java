@@ -73,6 +73,7 @@ private DeploymentService deploymentService;
         {
             RuntimeEngine runtime = runtimeManager.getRuntimeEngine(ProcessInstanceIdContext.get()); // null context
             KieSession ksession1 = runtime.getKieSession();
+
             Map<String, Object> params = new HashMap<String, Object>();
             ProcessInstance pi = ksession1.startProcess("myExternalInteractionsProcess", params);
             System.out.println("A process instance started : pid = " + pi.getId());
