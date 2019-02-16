@@ -18,18 +18,21 @@ import org.springframework.context.annotation.ImportResource;
 public class Application {
 	
     public static void main(String[] args) {
-    	System.out.println("-----------------1---------------------------------------------------"+ args[0] + " " + args[1] + " "+ args[2]);
+    //	System.out.println("-----------------1---------------------------------------------------"+ args[0] + " " + args[1] + " "+ args[2]);
         ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args);
+		DeploymentService deploymentService = (DeploymentService) ctx.getBean("deploymentService");
         if (args.length > 1) {
         	System.out.println("-----------------2---------------------------------------------------");
         	try {
 	        	System.out.println("Params available trying to deploy " + args);
-		        DeploymentService deploymentService = (DeploymentService) ctx.getBean("deploymentService");
+
 		        System.out.println("-----------------3---------------------------------------------------");
 		        KModuleDeploymentUnit unit = new KModuleDeploymentUnit(args[0], args[1], args[2]);
 				//KModuleDeploymentUnit unit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
 		        deploymentService.deploy(unit);
         	} catch (Throwable e) {
+				KModuleDeploymentUnit unit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
+				deploymentService.deploy(unit);
         		System.out.println("Error when deploying = " + e.getMessage());
         		System.out.println("-----------------4---------------------------------------------------");
         	}

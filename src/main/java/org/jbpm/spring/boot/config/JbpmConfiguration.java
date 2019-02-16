@@ -12,12 +12,14 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by simon on 2/16/2019.
  */
-//@Configuration
+@Configuration
 public class JbpmConfiguration {
-    //@Autowired
+    @Autowired
     private DeploymentService deploymentService;
 
-   // @Bean(name = "runtimeManager")
+
+
+    @Bean(name = "runtimeManager")
     public RuntimeManager runtimeManager() {
         DeploymentUnit deploymentUnit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
 // deploy
