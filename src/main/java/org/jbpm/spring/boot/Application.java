@@ -27,6 +27,7 @@ public class Application {
 		        DeploymentService deploymentService = (DeploymentService) ctx.getBean("deploymentService");
 		        System.out.println("-----------------3---------------------------------------------------");
 		        KModuleDeploymentUnit unit = new KModuleDeploymentUnit(args[0], args[1], args[2]);
+				//KModuleDeploymentUnit unit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
 		        deploymentService.deploy(unit);
         	} catch (Throwable e) {
         		System.out.println("Error when deploying = " + e.getMessage());
@@ -35,11 +36,4 @@ public class Application {
         }
     }
 }
-//-Dspring-boot.run.arguments=--spring.main.banner-mode=off,--customArgument=custom//
-//org.mastertheboss.kieserver
-//hello-kie-server
-//1.0
-//2.X
-//-Dspring-boot.run.arguments=org.mastertheboss.kieserver,hello-kie-server,1.0
-//1.X
-// -Drun.arguments=org.mastertheboss.kieserver,hello-kie-server,1.0
+// mvn spring-boot:run -Drun.arguments=org.mastertheboss.kieserver,hello-kie-server,1.0
