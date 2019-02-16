@@ -1,4 +1,4 @@
-package org.jbpm.spring.boot;
+package org.jbpm.spring;
 
 import org.jbpm.kie.services.impl.KModuleDeploymentUnit;
 import org.jbpm.services.api.DeploymentService;

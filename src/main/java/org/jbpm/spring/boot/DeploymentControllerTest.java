@@ -3,6 +3,8 @@ package org.jbpm.spring.boot;
 import org.jbpm.kie.services.impl.KModuleDeploymentUnit;
 import org.jbpm.services.api.DeploymentService;
 import org.jbpm.services.api.model.DeployedUnit;
+import org.jbpm.services.api.model.DeploymentUnit;
+import org.kie.api.runtime.manager.RuntimeManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,7 +19,8 @@ import java.util.Collection;
  */
 @RestController
 @RequestMapping("/deploymentest")
-public class DeploymentControllerTest {	@Autowired
+public class DeploymentControllerTest {
+    @Autowired
 private DeploymentService deploymentService;
 
     @RequestMapping("/")
@@ -46,10 +49,20 @@ private DeploymentService deploymentService;
         String[] gav = id.split(":");
 //org.mastertheboss.kieserver,hello-kie-server,1.0
     //    KModuleDeploymentUnit unit = new KModuleDeploymentUnit("org.mastertheboss.kieserver", "hello-kie-server", "1.0");
-KModuleDeploymentUnit unit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
+//KModuleDeploymentUnit unit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
     //    KModuleDeploymentUnit unit = new KModuleDeploymentUnit(args[0], args[1], args[2]);
-        deploymentService.deploy(unit);
+        //deploymentService.deploy(unit);
       //  deploymentService.deploy(unit);
+
+
+        // create deployment unit by giving GAV
+        DeploymentUnit deploymentUnit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
+// deploy
+        deploymentService.deploy(deploymentUnit);
+
+
+
+
 
         return outcome;
     }
