@@ -242,6 +242,13 @@
     <!-- test dependencies -->
 
     <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+
+    <dependency>
+      <groupId>uft</groupId>
+      <artifactId>chapter02</artifactId>
+      <version>1.0</version>
+    </dependency>
+
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
