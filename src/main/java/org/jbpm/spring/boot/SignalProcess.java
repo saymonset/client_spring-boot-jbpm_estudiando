@@ -1,4 +1,4 @@
-package org.jbpm.spring.boot.config;
+package org.jbpm.spring.boot;
 
 import org.jbpm.services.api.DeploymentService;
 import org.jbpm.services.api.ProcessService;
