@@ -1,7 +1,6 @@
 package org.jbpm.spring;
 
-import org.jbpm.kie.services.impl.KModuleDeploymentUnit;
-import org.jbpm.services.api.DeploymentService;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
@@ -20,7 +19,7 @@ public class Application {
     public static void main(String[] args) {
     //	System.out.println("-----------------1---------------------------------------------------"+ args[0] + " " + args[1] + " "+ args[2]);
         ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args);
-		DeploymentService deploymentService = (DeploymentService) ctx.getBean("deploymentService");
+
        /* if (args.length > 1) {
         	System.out.println("-----------------2---------------------------------------------------");
         	try {

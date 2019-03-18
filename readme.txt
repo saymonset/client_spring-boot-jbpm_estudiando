@@ -11,24 +11,21 @@
 
 3-)
 
-test
 
-Estudiar varios servicios que se llaman en
+Se Conecta con wildfly y se usa el cliente de  kieserver en jbpmconfiguration
 
-             http://localhost:8180/looping/deployService
-
-
-          Otras urls :
-
-                http://localhost:8180/deployment/
-
-                http://localhost:8180/looping/deploy
-
-                http://localhost:8180/signalProcess/deploy
-
-               http://localhost:8180/evaluation/deploy
+            http://localhost:8180/evaluation/
 
 
-    usuario = john
-    password = john1
+
+Roles de kieserver
+    kieserver=kie-server,rest-all
+
+  application-roles.properties, application-users.properties, roles.properties,user.properties
+
+Con add-user kieserver, usar ApplicationRealm  (Opcion b) ,  y pasar el role y usuario que se genero en application-users.properties, application-roles.properties a lo archivos users.properties, roles.properties
+
+
+    usuario = kieserver
+    password = kieserver
 
