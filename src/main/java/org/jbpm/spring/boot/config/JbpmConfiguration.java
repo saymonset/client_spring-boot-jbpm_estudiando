@@ -24,8 +24,7 @@ public class JbpmConfiguration {
         DeploymentUnit deploymentUnit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
 // deploy
         deploymentService.deploy(deploymentUnit);
-// retrieve deployed unit
-        DeployedUnit deployed = deploymentService.getDeployedUnit(deploymentUnit.getIdentifier());
+/* retrieve deployed unit*/ DeployedUnit deployed = deploymentService.getDeployedUnit(deploymentUnit.getIdentifier());
 // get runtime manager
         RuntimeManager manager = deployed.getRuntimeManager();
         return manager;
