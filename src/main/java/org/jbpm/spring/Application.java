@@ -21,14 +21,13 @@ public class Application {
     //	System.out.println("-----------------1---------------------------------------------------"+ args[0] + " " + args[1] + " "+ args[2]);
         ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args);
 		DeploymentService deploymentService = (DeploymentService) ctx.getBean("deploymentService");
-        if (args.length > 1) {
+       /* if (args.length > 1) {
         	System.out.println("-----------------2---------------------------------------------------");
         	try {
 	        	System.out.println("Params available trying to deploy " + args);
 
 		        System.out.println("-----------------3---------------------------------------------------");
 		        KModuleDeploymentUnit unit = new KModuleDeploymentUnit(args[0], args[1], args[2]);
-				//KModuleDeploymentUnit unit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
 		        deploymentService.deploy(unit);
         	} catch (Throwable e) {
 				KModuleDeploymentUnit unit = new KModuleDeploymentUnit("uft", "chapter02", "1.0");
@@ -36,7 +35,7 @@ public class Application {
         		System.out.println("Error when deploying = " + e.getMessage());
         		System.out.println("-----------------4---------------------------------------------------");
         	}
-        }
+        }*/
     }
 }
 // mvn spring-boot:run -Drun.arguments=org.mastertheboss.kieserver,hello-kie-server,1.0

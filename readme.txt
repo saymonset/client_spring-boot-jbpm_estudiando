@@ -13,14 +13,20 @@
 
 test
 
+Estudiar varios servicios que se llaman en
 
-    http://localhost:8080/deployment/
+             http://localhost:8180/looping/deployService
 
-    http://localhost:8180/looping/deploy
 
-    http://localhost:8180/signalProcess/deploy
+          Otras urls :
 
-   http://localhost:8180/evaluation/deploy
+                http://localhost:8180/deployment/
+
+                http://localhost:8180/looping/deploy
+
+                http://localhost:8180/signalProcess/deploy
+
+               http://localhost:8180/evaluation/deploy
 
 
     usuario = john
